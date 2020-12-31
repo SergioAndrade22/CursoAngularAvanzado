@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graph1Component } from './graph1/graph1.component';
@@ -15,6 +16,7 @@ import { PAGES_ROUTES } from './pages.routes';
     ],
     imports: [
         SharedModule,
+        FormsModule,
         PAGES_ROUTES
      ],
     exports: [
