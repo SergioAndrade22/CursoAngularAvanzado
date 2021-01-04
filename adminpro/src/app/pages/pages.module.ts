@@ -11,6 +11,7 @@ import { ChartsModule } from 'ng2-charts';
 
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { DoughnutGraphComponent } from '../components/doughnut-graph/doughnut-graph.component';
+import { PromisesComponent } from './promises/promises.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DoughnutGraphComponent } from '../components/doughnut-graph/doughnut-gr
         Graph1Component,
         IncrementadorComponent,
         DoughnutGraphComponent,
-        AccountSettingsComponent
+        AccountSettingsComponent,
+        PromisesComponent
     ],
     imports: [
         SharedModule,
