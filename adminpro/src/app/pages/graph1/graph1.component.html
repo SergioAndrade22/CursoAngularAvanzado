@@ -1,1 +1,19 @@
-<p>graph1 works!</p>
+<div class="row">
+    <div class="col-6">
+        <app-doughnut-graph [type]="graficos.grafico1.type" [title]="graficos.grafico1.leyenda" [labels]="graficos.grafico1.labels" [data]="graficos.grafico1.data"></app-doughnut-graph>
+    </div>
+
+    <div class="col-6">
+        <app-doughnut-graph [type]="graficos.grafico2.type" [title]="graficos.grafico2.leyenda" [labels]="graficos.grafico2.labels" [data]="graficos.grafico2.data"></app-doughnut-graph>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <app-doughnut-graph class="col-6" [type]="graficos.grafico3.type" [title]="graficos.grafico3.leyenda" [labels]="graficos.grafico3.labels" [data]="graficos.grafico3.data"></app-doughnut-graph>
+    </div>
+    
+    <div class="col-6">
+        <app-doughnut-graph class="col-6" [type]="graficos.grafico4.type" [title]="graficos.grafico4.leyenda" [labels]="graficos.grafico4.labels" [data]="graficos.grafico4.data"></app-doughnut-graph>
+    </div>
+</div>

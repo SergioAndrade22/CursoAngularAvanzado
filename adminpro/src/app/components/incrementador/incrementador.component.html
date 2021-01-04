@@ -1,0 +1,13 @@
+<h3>{{title}}</h3>
+
+<div class="input-group mb-3">
+    <button class="btn btn-primary" type="button" (click)="changeValue(-5)">
+        <i class="mdi mdi-minus"></i>
+    </button>
+
+    <input #txtProgress type="number" class="form-control" aria-describedby="basic-addon1" name="value" [(ngModel)]="value" (ngModelChange)="onChanges($event)" min="0" max="100">
+
+    <button class="btn btn-primary" type="button" (click)="changeValue(5)">
+        <i class="mdi mdi-plus"></i>
+    </button>
+</div>

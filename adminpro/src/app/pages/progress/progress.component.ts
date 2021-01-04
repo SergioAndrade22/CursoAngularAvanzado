@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-progress',
@@ -8,17 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
-  value: number = 50;
+  valueB: number = 50;
+  valueG: number = 20;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  changeValue(val: number): void {
-    this.value = val > 0 ?
-      (this.value + val) > 100 ? 100 : (this.value + val)
-      :
-      (this.value + val) < 0 ? 0 : (this.value + val);
   }
 }

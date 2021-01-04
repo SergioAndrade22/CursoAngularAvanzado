@@ -1,16 +1,15 @@
 <div class="row">
     <div class="col-12">
             <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Barra de progreso</h4>
-                
+                <h4 class="card-title">Barra de progreso</h4>
+                <div class="card-body">                
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="value" aria-valuemin="0" aria-valuemax="100" [style.width]="value + '%'"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="valueB" aria-valuemin="0" aria-valuemax="100" [style.width]="valueB + '%'"></div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="value" aria-valuemin="0" aria-valuemax="100" [style.width]="value + '%'"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="valueG" aria-valuemin="0" aria-valuemax="100" [style.width]="valueG + '%'"></div>
                     </div>
                 </div>
             </div>
@@ -21,17 +20,7 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <div class="input-group mb-3">
-                    <button class="btn btn-primary" type="button" (click)="changeValue(-5)">
-                        <i class="mdi mdi-minus"></i>
-                    </button>
-
-                    <input type="text" class="form-control" aria-describedby="basic-addon1" name="value" [(ngModel)]="value">
-
-                    <button class="btn btn-primary" type="button" (click)="changeValue(5)">
-                        <i class="mdi mdi-plus"></i>
-                    </button>
-                </div>
+                <app-incrementador (changedValue)="valueB = $event" title="Barra de Progreso Azul" [value]="valueB"></app-incrementador>
             </div>
         </div>
     </div>
@@ -39,7 +28,7 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                Texto 1
+                <app-incrementador (changedValue)="valueG = $event" title="Barra de Progreso Verde" [value]="valueG"></app-incrementador>
             </div>
         </div>
     </div>
